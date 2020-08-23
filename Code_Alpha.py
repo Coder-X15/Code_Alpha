@@ -3,8 +3,9 @@ alphabets = ['A','B','C','D','E','F','G','H',
      'Q','R','S','T','U','V','W','X','Y','Z'] # series of alphabets in order
 
 def find_index(letter):
-    '''Returns the index of the alphabet in the series of alphabet''' 
-    return alphabets.index(letter)
+    '''Returns the index of the alphabet in the series of alphabet'''
+    return alphabets.index(letter.upper())
+    
 
 def code_cyclic(index, letter):
     '''Cyclic transform of letters based on the index of the letter in the word and
@@ -43,9 +44,38 @@ def  code_sentence_to_numeric_string(sentence):
     for word in sentence.split():
         string = ""
         for number in code_word(word):
-            string += str(number) + "-"
+            string += str(number)+"-"
         sentence_number_coded.append(string)
-        sentence_number_coded.append("<space>")
+        sentence_number_coded.append('<space>')
     converted_string =  str().join(sentence_number_coded)
     # hope the <space> won't taunt you or disturb you... :)
     return converted_string
+
+def tokenize_numstring(numstring):
+    '''tokenizes the number code for processing'''
+    words = [] # array of the words (tokens)
+    string = ""
+    for i in numstring:
+        if (i not in ['<','>'] or i.upper() not in alphabets) and (i.isdigit() or i == '-'):
+            string += i
+        else:
+            words.append(string)
+            string = ""
+    for i in range(words.count('')):
+        words.remove('')
+    return words
+
+def decode(nstring):
+    '''decodes the coded string and prints it on screen'''
+    tokenized = tokenize_numstring(nstring)
+    for word in tokenized:
+        word_str = ""
+        num = ""
+        for i in word:
+                if i != '-':
+                        num += i
+                else:
+                        word_str += alphabets[(int(num) % 26) - 1]
+                        num = ""
+        print(word_str)
+
