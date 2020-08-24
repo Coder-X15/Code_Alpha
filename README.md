@@ -37,3 +37,4 @@ This is where Code_Alpha comes in . This is basically a coding - decoding mechan
  PS : There are a few things to be noted :
  1) Symbol transcription hasn't been made
  2) Contributers are welcome to make any change to the API to enhance its performance, its abilities, etc.
+ 3) Please put up the updates you made in this README file; also create a new release for this, in case you edit the API as a part of perfromance enhacement .
