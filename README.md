@@ -36,5 +36,4 @@ This is where Code_Alpha comes in . This is basically a coding - decoding mechan
  
  PS : There are a few things to be noted :
  1) Symbol transcription hasn't been made
- 2) No decoding service has been included in the current stage of development.
- 3) Contributers are welcome to make any change to the API to enhance its performance, its abilities, etc.
+ 2) Contributers are welcome to make any change to the API to enhance its performance, its abilities, etc.
