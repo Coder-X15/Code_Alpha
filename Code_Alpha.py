@@ -1,6 +1,6 @@
 alphabets = ['A','B','C','D','E','F','G','H',
      'I','J','K','L','M','N','O','P',
-     'Q','R','S','T','U','V','W','X','Y','Z'] # series of alphabets in order
+     'Q','R','S','T','U','V','W','X','Y','Z','.','#','%','!','?','/',','] # series of alphabets in order (plus some symbols)
 
 def find_index(letter):
     '''Returns the index of the alphabet in the series of alphabet'''
@@ -19,7 +19,7 @@ def code_cyclic(index, letter):
     # I had to use a separate variable 'index' to avoid the confusion the program gets when
     # choosing the index of the letter (eg, in the case of "HELLO", there are 2 'l' 's and this will cause confusion
     # This problem has been solved in the upcoming function.
-    return 26 * index + (find_index(letter) + 1)
+    return 33 * index + (find_index(letter) + 1)
 
 def code_word(word):
     '''codes each word with an array of numbers'''
@@ -75,7 +75,7 @@ def decode(nstring):
                 if i != '-':
                         num += i
                 else:
-                        word_str += alphabets[(int(num) % 26) - 1]
+                        word_str += alphabets[(int(num) % 33) - 1]
                         num = ""
         print(word_str)
 
