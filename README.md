@@ -42,5 +42,5 @@ This is where Code_Alpha comes in . This is basically a coding - decoding mechan
  # NEW !
  _________
  
- 1) (I forgot the date) Decoding function added...... use ```decode(nstring)``` (```nstring``` - the numeric string code to be decoded) to decode the codes you get ! 
- 2) (10/18/2020) Mentioning something I forgot to mention : some symbols have been added for transcription . Check the code for those symbols.
+ 1) (I forgot the date) <b> Decoding function added......</b> use ```decode(nstring)``` (```nstring``` - the numeric string code to be decoded) to decode the codes you get ! 
+ 2) (10/18/2020) <b>Mentioning something I forgot to mention :</b> some symbols have been added for transcription . Check the code for those symbols.
